@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Modern Data Platforms for Operationalizing Generative AI at Scale</title>
+  <title>Strategy Mosaic: Unifying Fragmented Data for Intelligent Enterprise Decisions</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Tailwind CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -13,73 +14,56 @@
 
   <!-- Navbar -->
   <div id="navbar"></div>
-  <!-- Banner -->
-  <!-- Correct image reference -->
 
-  <div class="max-w-5xl mx-auto mt-6">
-    <img src="assets/images/image20a.png" alt="Simpplr Banner" class="w-full">
-  </div>
-  <div class="max-w-5xl mx-auto mt-6">
-    <img src="assets/images/image20b.png" alt="Webinar Banner" class="w-full rounded-sm shadow">
-  </div>
-  <!-- Title + Register -->
-  <div class="max-w-5xl mx-auto mt-12 text-center"> <!-- increased spacing -->
-    <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 leading-snug mb-8">
-      Modern Data Platforms for
-      Operationalizing Generative AI at Scale
+  <!-- Main Section -->
+  <div class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- Heading -->
+    <h1 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-8">
+      Strategy Mosaic: Unifying Fragmented Data for Intelligent Enterprise Decisions
     </h1>
-    <button id="registerBtn"
-      class="mb-12 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded font-semibold shadow">
-      REGISTER NOW
-    </button>
+
+    <!-- Image + Text Layout  i need right side in center vertical -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start md:items-center">
+
+      <!-- Image + Button -->
+      <div class="md:col-span-1 text-center">
+        <img src="assets/images/IMAGE23A.png" alt="Guide Banner" class="w-40 h-auto mx-auto mb-4 ">
+        <button id="guideBtnTop" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 font-semibold shadow">
+          DOWNLOAD PDF
+        </button>
+      </div>
+
+      <!-- Text Content beside image -->
+      <div class="md:col-span-3 text-gray-800 space-y-4 ">
+        <p>
+          Enterprises today are struggling to scale AI and analytics across
+          disconnected systems and inconsistent metrics. Strategy Mosaic introduces
+          a Universal Intelligence Layer—an AI-powered semantic framework that
+          harmonizes data definitions, accelerates insights, and enables governed
+          access across all your tools. In this whitepaper, you’ll discover how leading
+          organizations are reducing costs, enhancing data trust, and preparing their
+          enterprise for next-generation analytics.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Text + Button -->
+    <div class="mt-8 space-y-4 text-gray-800">
+      <div class="text-center mt-6">
+        <button id="guideBtnBottom" class="text-red-600  hover:text-red-700 font-semibold ">
+          DOWNLOAD PDF
+        </button>
+      </div>
+    </div>
   </div>
-
-
-
-  <!-- Content -->
-  <div class="max-w-5xl mx-auto text-gray-800 space-y-4 px-4">
-    <p>
-      GenAI is currently evolving faster than most organizations can adapt. From AI copilots and
-      chatbots to custom LLMs and autonomous agents, the use cases are exploding. At the same
-      time, most data platforms were not built for GenAI — they were built to power dashboards
-      and batch analytics.
-    </p>
-
-    <p>
-      The table stakes have shifted dramatically. Operationalizing GenAI at scale requires the
-      ability to manage large volumes of unstructured data, low-latency inference, real-time
-      context delivery, retrieval- augmented generation (RAG), and prompt orchestration — just to
-      name a few. If your infrastructure cannot support these types of workloads reliably and at
-      scale, your GenAI investments will stall.
-    </p>
-    <h2 class="font-semibold"> Join this September 30th roundtable webinar to learn the following:</h2>
-    <ul class="list-disc pl-6 space-y-1">
-      <li>Key requirements for modern data platforms</li>
-      <li>Best practices for integrating vector databases, feature stores, and retrieval systems</li>
-      <li>How to manage unstructured data and real-time pipelines at scale</li>
-      <li> Security, governance, and compliance for GenAI in the enterprise</li>
-    </ul>
-    <p>
-      Reserve your seat today!
-    </p>
-
-    <p>
-      <span id="registerText" class="text-red-600 font-bold cursor-pointer hover:underline">REGISTER NOW</span>
-      to attend the webinar <span class="font-bold"> Modern Data Platforms for Operationalizing
-        Generative AI at Scale.</span>
-    <p class="font-medium">
-      Don’t miss this live event on <span class="font-bold">Tuesday, September 30, 11:00 AM PT / 2:00 PM ET.</span>
-    </p>
-    </p>
-  </div>
-
 
   <!-- Footer -->
   <div id="footer" class="mt-12"></div>
 
   <!-- JS -->
   <script>
-    // Load navbar and footer
+    // Load Navbar & Footer
     fetch('navbar.html')
       .then(res => res.text())
       .then(data => document.getElementById('navbar').innerHTML = data);
@@ -88,13 +72,13 @@
       .then(res => res.text())
       .then(data => document.getElementById('footer').innerHTML = data);
 
-    // Register actions
-    function goRegister() {
-      window.open('register.html', '_blank');
+    // Open guide
+    function openGuide() {
+      window.open('download.html', '_blank');
     }
 
-    document.getElementById('registerBtn').addEventListener('click', goRegister);
-    document.getElementById('registerText').addEventListener('click', goRegister);
+    document.getElementById('guideBtnTop').addEventListener('click', openGuide);
+    document.getElementById('guideBtnBottom').addEventListener('click', openGuide);
   </script>
 
 </body>
